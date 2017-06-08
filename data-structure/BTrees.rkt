@@ -1,5 +1,7 @@
 #lang racket
 
+(require lens)
+
 (define id (lambda (i) i))
 
 (struct Node (key value left right) #:transparent)
