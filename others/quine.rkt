@@ -4,6 +4,8 @@
 
 ((λ (x) `(,x ',x)) '(λ (x) `(,x ',x)))
 
+((lambda (h) (write `(,h ',h))) '(lambda (h) (write `(,h ',h))))
+
 ;; call/cc
 
 (call/cc
