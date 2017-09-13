@@ -1,5 +1,11 @@
 #lang racket
 
+(define (>> arg . funs)
+  #;(foldl (λ (f x) (f x)) arg funs)
+  (foldl curry arg funs))
+
+(>> 3 (λ (x) (+ x 2)) (λ (x) (+ x 3)))
+
 (define (id . args) (apply values args))
 
 (define (inject . args) (lambda () (apply values args)))

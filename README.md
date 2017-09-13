@@ -9,6 +9,8 @@ A Collection of My Racket Code
 Put function calls in a streaming fashion
 
 ```racket
+(>> 3 (λ (x) (+ x 2)) (λ (x) (+ x 3)))
+
 (define (fun0 x y)
   (values (+ x y) (- x y)))
 
@@ -198,4 +200,26 @@ define fun(x y)
 
 fun(2 3)
 fun(3 2)
+```
+
+### comments.rkt
+
+examples of different types of comments
+
+```racket
+#lang racket
+
+;   single
+;;  line
+;;; coments
+
+#| block
+   comments
+|#
+
+#;(define (fun x)
+    (s-exp comments))
+
+#! /bin/sh
+
 ```
